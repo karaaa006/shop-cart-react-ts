@@ -58,6 +58,7 @@ const CartItemsCount = styled.div`
 
   border-radius: 50px;
 
+  box-shadow: 0 2px 5px rgba(0, 0, 150, 0.15);
   background-color: #ffffff;
   color: #fc8086;
 `;
@@ -127,9 +128,9 @@ export const Cart = ({
     <Wrapper isOpen={isOpen}>
       <IconWrapper onClick={() => setIsOpen(!isOpen)}>
         <StyledCartIcon />
-        <CartItemsCount>
-          {cartItems.length > 0 && cartItems.length}
-        </CartItemsCount>
+        {cartItems.length > 0 && (
+          <CartItemsCount>{cartItems.length}</CartItemsCount>
+        )}
       </IconWrapper>
       <CartWrapper>
         <CartTitle>Your shopping cart</CartTitle>

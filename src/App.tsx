@@ -20,9 +20,12 @@ const ProductList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
 
   gap: 20px;
+  padding: 0;
+  margin: 0;
 
   font-family: "Source Sans Pro", sans-serif;
 
+  list-style: none;
   overflow: hidden;
 
   @media screen and (max-width: 1024px) {
